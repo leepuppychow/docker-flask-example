@@ -19,4 +19,5 @@ Note: this repo is set to automatically build docker images and host them in my 
 
 4. From the `nginx` branch, start the system with `docker-compose up --scale server=5`
     * This will create 5 replicas of our flask app. Note that the docker-compose.yml has changed and now we just expose port 5000 (instead of explicitly mapping port 5000 to 5000). Docker will automatically map each Flask app to an open port behind the scenes.
+    * You can see the running docker-compose services by running `docker-compose ps` in another shell window.
     * With the `nginx.conf` setup, now whenever you go to localhost:4000, the request will be routed to one of the 5 server replicas in a round-robin style. 
