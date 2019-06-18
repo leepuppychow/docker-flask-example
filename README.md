@@ -1,4 +1,4 @@
-## Example Repo for using Docker with Flask
+## Example Repo for using Docker with Flask & Nginx load balancer
 
 Note: this repo is set to automatically build docker images and host them in my [DockerHub repo](https://hub.docker.com/r/leepuppychow/docker-flask-example)
 
