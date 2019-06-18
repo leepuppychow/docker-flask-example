@@ -4,7 +4,4 @@ services:
   server:
     image: leepuppychow/docker-flask-example
     ports:
-      # This works if we only have one replica of the server running
       - "5000:5000"
-      # Use this if you have replicas (Docker will automatically choose open ports to map to)
-      # - "5000" 

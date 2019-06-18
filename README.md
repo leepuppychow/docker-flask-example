@@ -14,5 +14,5 @@ Note: this repo is set to automatically build docker images and host them in my 
     * You can spin up all the services (locally) at once with docker-compose via `docker-compose up`
     * Right now since the Docker image is hosted in DockerHub you don't have to run anything locally (typically would run `docker-compose build` first to build images for each of your services)
     * A cool thing with docker-compose is you can start several replicas of a service by doing: `docker-compose up --scale server=5` (here server refers to the name of the service defined in our docker-compose.yml file)
-    * You can see what docker-compose services (container) are running with `docker-compose ps`
-    
+    * If you are working off the `master` branch running replicases of `server` won't work because each replica would be trying to map to port 5000 and create a conflict.
+    * Checkout the `nginx` branch to see an example of running several replicas of the server with nginx as a Load Balancer
